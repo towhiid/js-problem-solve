@@ -1,10 +1,13 @@
 // feetToMile
 function feetToMile(feet) {
     var mile = feet*0.00018939;
-    return mile;
-
+    if(feet<0){
+        return "please input a positive value";
+    }else{
+        return mile;
+    }
 }
-var result = feetToMile(2);
+var result = feetToMile(-3);
 console.log(result);
 
 // woodCalculator
