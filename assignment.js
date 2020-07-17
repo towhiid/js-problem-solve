@@ -29,7 +29,21 @@ function woodCalculator(chair, table, bed){
 
 // brickCalculator
 
+    function brickCalculator(floor) {
+        if (floor <= 10) {
+            var bricks = (floor * 15 * 1000);
+            return bricks;
+        } else if (floor > 10 && floor <= 20) {
+            var bricks = (10 * 15 * 1000) + (floor - 10) * 12 * 1000;
+            return bricks;
+        } else if (floor > 20) {
+            var bricks = (10 * 15 * 1000) + (10 * 12 * 1000) + (floor - 20) * 10 * 1000;
+            return bricks;
+        } 
+    }
 
+var story = brickCalculator(15);
+console.log(story);
 
 // tinyFriend
 
